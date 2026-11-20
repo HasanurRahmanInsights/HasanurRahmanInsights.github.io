@@ -1,8 +1,0 @@
-/* Long-form reading styles. Applies inside .article-body only. */
-.article-body { font-size: 1.125rem; line-height: 1.75; max-width: var(--width-prose); }
-.article-body h2 { margin-top: var(--space-16); }
-.article-body h3 { margin-top: var(--space-8); }
-.article-body blockquote { margin: var(--space-8) 0; padding-left: var(--space-6); border-left: 3px solid var(--accent); color: var(--navy-800); font-style: italic; }
-.article-body hr { border: 0; border-top: var(--border); margin: var(--space-16) 0; }
-.article-body img { margin-block: var(--space-6); }
-.article-body li { margin-bottom: var(--space-2); }
