@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin | Hasanur Rahman | Global Affairs</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="adm">
+  <header class="top">
+    <div class="wrap bar">
+      <span class="brand"><img src="images/logo.png" alt="" width="150" height="111"><b>Admin</b></span>
+      <button type="button" id="logout" class="abtn light" hidden>Log out</button>
+    </div>
+  </header>
+
+  <main class="wrap apage">
+    <p id="msg" role="status" hidden></p>
+
+    <!-- 1. Login -->
+    <section id="login" hidden>
+      <h1>Admin login</h1>
+      <form id="loginForm" class="panel" autocomplete="on">
+        <label for="email">Email</label>
+        <input id="email" type="email" autocomplete="username" required>
+        <label for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password" required>
+        <button class="abtn" type="submit">Log in</button>
+      </form>
+    </section>
+
+    <!-- 2. Dashboard -->
+    <section id="dash" hidden>
+      <div class="dhead">
+        <h1>Articles</h1>
+        <button type="button" id="newBtn" class="abtn">+ New article</button>
+      </div>
+      <div id="lists"></div>
+      <p><a href="index.html">&larr; View website</a></p>
+    </section>
+
+    <!-- 3. Editor -->
+    <section id="editor" hidden>
+      <h1 id="edTitle">New article</h1>
+      <form id="form" class="panel">
+        <label for="title">Article title</label>
+        <input id="title" type="text" required>
+
+        <label for="subtitle">Subtitle</label>
+        <input id="subtitle" type="text">
+
+        <label for="slug">Slug (web address; English letters, numbers, hyphens)</label>
+        <input id="slug" type="text" placeholder="example: indo-pacific-balance" required>
+        <p class="hint" id="slugHint">Created from the title. It cannot be changed after saving.</p>
+
+        <label for="category">Category</label>
+        <input id="category" type="text" placeholder="example: Geopolitics" required>
+
+        <label for="tags">Tags (separate with commas)</label>
+        <input id="tags" type="text" placeholder="example: China, Indo-Pacific, Strategy">
+
+        <label for="cover">Cover image URL</label>
+        <input id="cover" type="text" placeholder="images/my-photo.jpg or https://...">
+
+        <label for="excerpt">Short summary</label>
+        <textarea id="excerpt" rows="3" required></textarea>
+
+        <label id="edLabel">Article content</label>
+        <div class="tb" id="tb" role="toolbar" aria-label="Formatting">
+          <button type="button" data-c="formatBlock" data-v="&lt;h2&gt;">Heading</button>
+          <button type="button" data-c="formatBlock" data-v="&lt;p&gt;">Paragraph</button>
+          <button type="button" data-c="bold"><b>B</b></button>
+          <button type="button" data-c="italic"><i>I</i></button>
+          <button type="button" data-c="insertUnorderedList">&bull; List</button>
+          <button type="button" data-c="insertOrderedList">1. List</button>
+          <button type="button" data-c="link">Link</button>
+          <button type="button" data-c="formatBlock" data-v="&lt;blockquote&gt;">Quote</button>
+        </div>
+        <div id="ed" class="ed body" contenteditable="true" role="textbox" aria-multiline="true" aria-labelledby="edLabel"></div>
+
+        <label for="date">Publication date</label>
+        <input id="date" type="date">
+
+        <label for="status">Status</label>
+        <select id="status">
+          <option value="draft">Draft (not public)</option>
+          <option value="published">Published (public)</option>
+        </select>
+
+        <div class="acts">
+          <button class="abtn" type="submit">Save</button>
+          <button class="abtn light" type="button" id="cancel">Cancel</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="articles.js"></script>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
