@@ -8,7 +8,8 @@
    Leave a value empty ("") and it will NOT appear on the website.
    Put your real link between the quotation marks. */
 const SITE = {
-  email: "",        // example: "name@example.com"
+  email: "hasanurrahmaninsights@gmail.com",
+  whatsapp: "8801521731046", // country code + number, digits only (880 = Bangladesh). Leave "" to hide.
   social: {
     "X (Twitter)": "https://x.com/Hasanur_Insight",
     "Facebook": "https://www.facebook.com/share/1CaD4rMYzi/",
