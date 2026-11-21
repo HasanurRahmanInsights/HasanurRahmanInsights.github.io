@@ -56,7 +56,6 @@ img { max-width: 100%; display: block; }
 .band { background: var(--mist); border-block: 1px solid var(--line); }
 h2 { font: 500 1.9rem/1.2 var(--serif); color: var(--navy); margin: 0 0 1.5rem; padding-bottom: .6rem; border-bottom: 2px solid var(--brass); display: inline-block; }
 h3 { font: 600 1.2rem var(--serif); color: var(--navy); margin: 2rem 0 .6rem; }
-.two { display: grid; gap: 1.2rem; }
 .todo { color: #7a5a14; background: #fbf5e6; border-left: 3px solid var(--brass); padding: .6rem .9rem; margin: 0; }
 .topics { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .6rem; }
 .topics li { background: #fff; border: 1px solid var(--line); padding: .45rem .9rem; border-radius: 999px; font-size: .95rem; }
@@ -103,7 +102,6 @@ footer p { margin: 0 0 .3rem; }
 @media (min-width: 800px) {
   .hero { padding: 7rem 0 6rem; }
   .globe { right: 2%; top: 50%; translate: 0 -50%; width: 480px; }
-  .two { grid-template-columns: 1fr 1fr; gap: 3rem; }
   .grid { grid-template-columns: repeat(3, 1fr); }
   .feat { grid-template-columns: 1fr 1fr; align-items: center; gap: 2.5rem; }
 }
@@ -198,3 +196,51 @@ footer { padding: 3rem 0 1.5rem; }
 .fbottom p { margin: 0; }
 @media (min-width: 800px) { .fgrid { grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; } }
 @media (prefers-reduced-motion: reduce) { .sbtn { transition: none; } .sbtn:hover { transform: none; } }
+
+/* About page content */
+.split { display: grid; gap: 1.5rem; }
+.ab-lead { font: 500 clamp(1.6rem, 5vw, 2.4rem)/1.25 var(--serif); color: var(--navy); margin: 0; }
+.ab-text { max-width: 46rem; }
+.ab-text p, p.ab-text { margin: 0 0 1rem; }
+.ab-sub { font: 600 1.05rem var(--serif); color: var(--navy); margin: 0 0 .5rem; }
+
+/* Numbered mission list */
+.nums { list-style: none; counter-reset: n; padding: 0; margin: 0; }
+.nums li { counter-increment: n; display: flex; gap: 1rem; padding: .9rem 0; border-top: 1px solid var(--line); }
+.nums li:last-child { border-bottom: 1px solid var(--line); }
+.nums li::before { content: counter(n, decimal-leading-zero); flex: none; width: 2rem; font: 500 1.1rem var(--serif); color: #8a6a22; }
+
+/* Areas of interest: editorial list with numerals */
+.areas { counter-reset: a; display: grid; gap: 1.8rem; }
+.area { counter-increment: a; border-top: 2px solid var(--navy); padding-top: .9rem; }
+.area::before { content: counter(a, decimal-leading-zero); font: 500 1rem var(--serif); color: #8a6a22; }
+.area h3 { margin: .3rem 0 .5rem; font-size: 1.2rem; }
+.area p { margin: 0; color: var(--muted); }
+
+/* Analytical approach pillars */
+.pillars { counter-reset: p; display: grid; gap: 1.6rem; margin: 1.8rem 0 0; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+.pillars > div { counter-increment: p; border-top: 3px solid var(--brass); padding-top: .8rem; }
+.pillars > div::before { content: counter(p); font: 500 1.8rem/1 var(--serif); color: var(--navy); }
+.pillars dt { font: 600 1.1rem var(--serif); color: var(--navy); margin: .5rem 0 .3rem; }
+.pillars dd { margin: 0; color: var(--muted); font-size: .95rem; }
+
+/* Founder */
+.founder { display: grid; gap: 1.5rem; align-items: start; }
+.fpanel { background: var(--navy); color: #fff; padding: 1.8rem; text-align: center; border-bottom: 3px solid var(--brass); }
+.fpanel img { height: 90px; width: auto; margin: 0 auto 1rem; }
+.fn { font: 500 1.6rem/1.2 var(--serif); margin: 0 0 .3rem; }
+.frole { color: var(--brass); margin: 0; font-weight: 600; }
+
+/* Vision */
+.vision { background: var(--navy); color: #c9d3e6; text-align: center; }
+.vision h2 { color: #fff; }
+.vtext { max-width: 44rem; margin: 0 auto; font: 1.3rem/1.6 var(--serif); color: #e6ebf4; }
+.vision .vclose { font: italic 1.5rem/1.4 var(--serif); color: var(--brass); margin: 2rem 0 0; }
+
+@media (min-width: 860px) {
+  .split { grid-template-columns: 1fr 1.3fr; gap: 4rem; }
+  .areas { grid-template-columns: repeat(6, 1fr); gap: 2.2rem 2rem; }
+  .area { grid-column: span 2; }
+  .area:nth-child(n+4) { grid-column: span 3; }
+  .founder { grid-template-columns: 280px 1fr; gap: 3rem; }
+}
