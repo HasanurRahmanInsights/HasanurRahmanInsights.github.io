@@ -175,3 +175,9 @@ footer p { margin: 0 0 .3rem; }
 .ed { min-height: 320px; padding: .8rem; border: 1px solid #b9c1cf; border-radius: 4px; background: #fff; }
 .ed:focus { outline: 2px solid var(--brass); }
 @media (min-width: 600px) { .row { grid-template-columns: 1fr auto; align-items: center; } }
+
+/* Contact details */
+.contact { list-style: none; padding: 0; margin: 0 0 1rem; display: grid; gap: .5rem; }
+.contact li { display: flex; flex-wrap: wrap; gap: .3rem 1rem; }
+.contact span { min-width: 5.5rem; color: var(--muted); }
+.contact a { font-weight: 600; overflow-wrap: anywhere; }
