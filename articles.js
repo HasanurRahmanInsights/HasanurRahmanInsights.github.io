@@ -10,12 +10,10 @@
 const SITE = {
   email: "",        // example: "name@example.com"
   social: {
-    "LinkedIn": "",     // example: "https://www.linkedin.com/in/your-name"
-    "X (Twitter)": "",  // example: "https://x.com/your-name"
-    "Facebook": "",     // example: "https://facebook.com/your-name"
-    "ResearchGate": "", // example: "https://www.researchgate.net/profile/your-name"
-    "Academia.edu": "", // example: "https://independent.academia.edu/yourname"
-    "GitHub": "https://github.com/HasanurRahmanInsights"
+    "X (Twitter)": "https://x.com/Hasanur_Insight",
+    "Facebook": "https://www.facebook.com/share/1CaD4rMYzi/",
+    "LinkedIn": "https://www.linkedin.com/in/hasanur-insights/",
+    "Instagram": "https://www.instagram.com/hasanur_insights/"
   }
 };
 
