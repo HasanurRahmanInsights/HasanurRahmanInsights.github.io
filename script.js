@@ -56,9 +56,13 @@ import { getFirestore, collection, query, where, getDocs } from "https://www.gst
 
   // ----- Contact and social (only filled-in values are shown) -----
   function renderContact() {
-    $("#contactBox").innerHTML = SITE.email
-      ? `<p><a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a></p>`
-      : `<p class="todo">[PLACEHOLDER: Add your email address in articles.js, under SITE.]</p>`;
+    const wa = String(SITE.whatsapp || "").replace(/\D/g, "");
+    const rows = [];
+    if (SITE.email) rows.push(`<li><span>Email</span><a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a></li>`);
+    if (wa) rows.push(`<li><span>WhatsApp</span><a href="https://wa.me/${wa}" target="_blank" rel="noopener noreferrer">+${wa}</a></li>`);
+    $("#contactBox").innerHTML = rows.length
+      ? `<ul class="contact">${rows.join("")}</ul>`
+      : `<p class="todo">[PLACEHOLDER: Add your email in articles.js, under SITE.]</p>`;
     const links = Object.entries(SITE.social).filter(([, url]) => url);
     $("#socialBox").innerHTML = links.length
       ? links.map(([n, u]) => `<li><a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(n)}</a></li>`).join("")
