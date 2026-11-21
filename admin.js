@@ -30,7 +30,11 @@ let items = [], editing = null, slugTouched = false;
 const authMsg = (e) =>
   /invalid-credential|wrong-password|user-not-found|invalid-email/.test(e.code) ? "Incorrect email or password."
   : e.code === "auth/too-many-requests" ? "Too many attempts. Please wait a few minutes and try again."
-  : e.code === "auth/network-request-failed" ? "No internet connection." : "Login failed. Please try again.";
+  : e.code === "auth/network-request-failed" ? "No internet connection."
+  : e.code === "auth/operation-not-allowed" ? "Email/Password sign-in is not enabled in Firebase (Authentication > Sign-in method)."
+  : /api-key-not-valid|invalid-api-key/.test(e.code) ? "The Firebase API key in articles.js is not valid."
+  : e.code === "auth/user-disabled" ? "This account has been disabled in Firebase."
+  : "Login failed (" + (e.code || "unknown error") + "). Please try again.";
 
 $("#loginForm").addEventListener("submit", async (e) => {
   e.preventDefault(); say("");
@@ -48,7 +52,7 @@ async function loadList() {
     items.sort((a, b) => ms(b.updatedAt || b.createdAt) - ms(a.updatedAt || a.createdAt));
     drawList();
   } catch (e) {
-    if (e.code === "permission-denied") { say("This account is not authorised as admin.", true); signOut(auth); }
+    if (e.code === "permission-denied") { say("Logged in, but this account is not authorised. The UID in the Firestore rules must match this account\u2019s User UID, and the rules must be published.", true); signOut(auth); }
     else say("Could not load articles. Please refresh and try again.", true);
   }
 }
