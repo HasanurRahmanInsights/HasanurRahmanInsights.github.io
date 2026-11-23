@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hasanurrahmaninsights.github.io/sitemap.xml
