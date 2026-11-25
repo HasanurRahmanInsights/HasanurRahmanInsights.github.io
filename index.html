@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hasanur Rahman | Geopolitics, International Relations &amp; Strategy</title>
+  <meta name="description" content="Independent analysis of geopolitics, international security and foreign policy, with a focus on Bangladesh and South Asia.">
+  <meta name="author" content="Hasanur Rahman">
+  <meta name="theme-color" content="#0a1930">
+  <link rel="canonical" href="https://hasanurrahmaninsights.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hasanur Rahman | Geopolitics, International Relations &amp; Strategy">
+  <meta property="og:description" content="Independent analysis of geopolitics, international security and foreign policy, with a focus on Bangladesh and South Asia.">
+  <meta property="og:url" content="https://hasanurrahmaninsights.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta property="og:image" content="https://hasanurrahmaninsights.github.io/og.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://hasanurrahmaninsights.github.io/og.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600&family=Noto+Serif+Bengali:wght@400;600&display=swap">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Hasanur Rahman","url":"https://hasanurrahmaninsights.github.io/","description":"Writer on geopolitics, international relations, strategic studies and South Asian affairs.","knowsAbout":["Geopolitics","International Relations","Strategic Studies","Foreign Policy","Bangladesh","South Asia"]}</script>
+  <link rel="preload" as="image" href="hero.webp" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="style.css?v=20261125">
+</head>
+<body>
+  <div id="progress" class="progress" hidden></div>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <div class="wrap bar">
+      <a class="brand" href="#home"><img src="logo.png" alt="" width="150" height="111"><b>Hasanur Rahman</b></a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Menu"><i></i><i></i><i></i></button>
+      <nav id="nav" aria-label="Main navigation">
+        <a href="#articles" data-sec="articles">Articles</a>
+        <a href="#articles" data-region="Bangladesh" data-sec="bangladesh" hidden>Bangladesh</a>
+        <a href="#research" data-sec="research" hidden>Research</a>
+        <a href="#media" data-sec="media" hidden>Media</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main site (hidden while an article is open) -->
+  <div id="site">
+    <section class="hero" id="home">
+      <div class="wrap">
+        <h1>Understanding Global Politics, Power and Strategy.</h1>
+        <p class="lead">Independent analysis of Bangladesh and South Asia: politics, security, economy and foreign policy, in global context.</p>
+        <p class="actions"><a class="btn" href="#articles" data-sec="articles">Read the latest analysis</a>
+          <a class="btn ghost" href="#articles" data-region="Bangladesh" data-sec="bangladesh" hidden>Bangladesh</a>
+          <a class="btn ghost" href="#about">About</a></p>
+      </div>
+    </section>
+
+    <main id="main">
+      <section id="start" class="band" hidden>
+        <div class="wrap sec">
+          <h2>Start here</h2>
+          <p class="ab-text">New to my work? Begin with these.</p>
+          <div id="startBox" class="grid"></div>
+        </div>
+      </section>
+
+      <section id="articles" class="wrap sec">
+        <h2>Articles</h2>
+        <div id="featuredBox"></div>
+        <div id="seriesRow" class="explore"></div>
+        <div class="tools" id="tools" hidden>
+          <label class="sr" for="search">Search articles</label>
+          <input id="search" type="search" placeholder="Search articles by title, topic or keyword">
+          <div class="selects">
+            <label class="sr" for="fTopic">Topic</label><select id="fTopic"></select>
+            <label class="sr" for="fRegion">Region</label><select id="fRegion"></select>
+            <label class="sr" for="fType">Type</label><select id="fType"></select>
+          </div>
+          <div id="explore" class="explore"></div>
+        </div>
+        <p id="note" class="note" hidden></p>
+        <div id="list" class="grid" aria-live="polite"></div>
+      </section>
+
+      <section id="research" class="band" hidden>
+        <div class="wrap sec">
+          <h2>Research &amp; Publications</h2>
+          <div id="pubBox" class="publist"></div>
+        </div>
+      </section>
+
+      <section id="media" class="wrap sec" hidden>
+        <h2>Media</h2>
+        <div id="videoWrap" hidden>
+          <h3 class="sub">Videos</h3>
+          <div id="videoBox" class="vgrid"></div>
+        </div>
+        <div id="resWrap" hidden>
+          <h3 class="sub">Maps, Books &amp; Reports</h3>
+          <div id="resBox" class="grid"></div>
+        </div>
+      </section>
+
+      <section id="glossary" class="wrap sec" hidden>
+        <h2>Glossary</h2>
+        <p class="ab-text">Key terms used in strategic, security and political analysis.</p>
+        <dl id="glossBox" class="gloss"></dl>
+      </section>
+
+      <section id="profile" class="band" hidden>
+        <div class="wrap sec">
+          <h2>Academic Profile</h2>
+          <div id="profileBox" class="plist"></div>
+        </div>
+      </section>
+
+      <section id="about" class="wrap sec">
+        <div class="split">
+          <div>
+            <h2>About</h2>
+            <p class="ab-lead" id="aboutLead">Beyond Headlines. Understanding the World.</p>
+          </div>
+          <div class="ab-text" id="aboutBody">
+            <p>I write about how power, geography and history shape international politics, with a particular focus on Bangladesh and South Asia. This site brings together my analysis, research and sources.</p>
+            <p>My aim is to look beyond the headlines: the historical context, geopolitical interests, strategic calculations and political forces behind international events.</p>
+            <p>I try to explain complex developments clearly, show my evidence and sources, and keep facts separate from opinion.</p>
+          </div>
+        </div>
+        <button type="button" id="moreBtn" class="morerow" aria-expanded="false" aria-controls="aboutMore">
+          <span class="mr-text"><strong id="moreLabel">More about me and my work</strong><small>Mission &middot; Areas of interest &middot; Approach &middot; Editorial standards &middot; Author</small></span>
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </section>
+
+      <div id="aboutMore" class="more-wrap" inert><div class="more-inner">
+      <nav class="subnav wrap" aria-label="More about me">
+          <a href="#mission" data-more="mission">Mission</a>
+          <a href="#areas" data-more="areas">Areas of Interest</a>
+          <a href="#approach" data-more="approach">Approach</a>
+          <a href="#standards" data-more="standards">Editorial Standards</a>
+          <a href="#founder" data-more="founder">About the Author</a>
+        </nav>
+      <section id="mission" class="band">
+        <div class="wrap sec split">
+          <div>
+            <h2>Mission</h2>
+            <p class="ab-text">My mission is to make complex geopolitical and political developments more understandable through analytical writing, historical context and critical examination.</p>
+          </div>
+          <div>
+            <p class="ab-sub">I aim to:</p>
+            <ol class="nums">
+              <li>Explain international affairs with historical and geographical context, beyond surface-level news.</li>
+              <li>Examine Bangladesh&rsquo;s politics, history, governance and foreign relations within the regional and global system.</li>
+              <li>Keep facts and opinion apart, show my sources, and encourage critical, informed discussion.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="areas" class="wrap sec">
+        <h2>Areas of Interest</h2>
+        <div class="areas">
+          <div class="area"><h3>Politics &amp; Governance</h3><p>Bangladesh&rsquo;s political landscape, constitution, elections, institutions and democratic practice, with comparative context.</p><a class="areago" href="#articles" data-topic="Politics &amp; Governance" data-sec="articles" hidden>Browse articles &rarr;</a></div>
+          <div class="area"><h3>Geopolitics &amp; International Relations</h3><p>Great-power competition, alliances, diplomacy and foreign policy, including Bangladesh&rsquo;s place in the Bay of Bengal and the wider region.</p><a class="areago" href="#articles" data-topic="Geopolitics &amp; International Relations" data-sec="articles" hidden>Browse articles &rarr;</a></div>
+          <div class="area"><h3>Military &amp; Strategic Studies</h3><p>Military power, doctrine, deterrence, warfare and defence technology, with attention to South Asia and Bangladesh.</p><a class="areago" href="#articles" data-topic="Military &amp; Strategic Studies" data-sec="articles" hidden>Browse articles &rarr;</a></div>
+          <div class="area"><h3>Intelligence &amp; National Security</h3><p>The role of intelligence services, national security policy and strategic risk, studied from open sources.</p><a class="areago" href="#articles" data-topic="Intelligence &amp; National Security" data-sec="articles" hidden>Browse articles &rarr;</a></div>
+          <div class="area"><h3>Cyber &amp; Technology Security</h3><p>Cyber threats, digital security policy and the strategic effects of technology.</p><a class="areago" href="#articles" data-topic="Cyber &amp; Technology Security" data-sec="articles" hidden>Browse articles &rarr;</a></div>
+          <div class="area"><h3>Political Economy</h3><p>Global and Bangladeshi political economy, trade, development and the economics of defence.</p><a class="areago" href="#articles" data-topic="Political Economy" data-sec="articles" hidden>Browse articles &rarr;</a></div>
+          <div class="area"><h3>History &amp; Political Analysis</h3><p>Reading contemporary events through history, political theory, institutions and power structures.</p><a class="areago" href="#articles" data-topic="History &amp; Political Analysis" data-sec="articles" hidden>Browse articles &rarr;</a></div>
+        </div>
+      </section>
+
+      <section id="approach" class="band">
+        <div class="wrap sec">
+          <h2>Analytical Approach</h2>
+          <p class="ab-text">Meaningful analysis requires more than following events. My approach emphasises:</p>
+          <dl class="pillars">
+            <div><dt>Historical Context</dt><dd>Understanding how the past shapes the present.</dd></div>
+            <div><dt>Geographical Perspective</dt><dd>How geography, resources, borders and strategic locations influence political decisions.</dd></div>
+            <div><dt>Multiple Perspectives</dt><dd>Weighing competing interests, narratives and interpretations.</dd></div>
+            <div><dt>Critical Thinking</dt><dd>Questioning assumptions, examining evidence and separating facts from opinion.</dd></div>
+            <div><dt>Analytical Depth</dt><dd>Asking not only what is happening, but why, and what it may mean.</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="standards" class="wrap sec split">
+        <div>
+          <h2>Editorial Standards</h2>
+          <p class="ab-text">How I try to keep this work reliable.</p>
+        </div>
+        <ol class="nums">
+          <li><strong>Sources.</strong> I cite sources for factual claims and link to them where I can.</li>
+          <li><strong>Facts and opinion.</strong> I keep reporting and analysis distinct, and say when I am offering a judgement.</li>
+          <li><strong>Corrections.</strong> If I find an error, I correct it and show the update date on the article.</li>
+          <li><strong>Independence.</strong> This is a personal, independent project and carries no advertising.</li>
+        </ol>
+      </section>
+
+      <section id="founder" class="band">
+        <div class="wrap sec">
+          <h2>About the Author</h2>
+          <div class="founder">
+            <div class="fpanel">
+              <img id="founderImg" src="logo.png" alt="" width="150" height="111">
+              <p class="fn">Hasanur Rahman</p>
+            </div>
+            <div class="ab-text">
+              <p>I am a Mathematics Honours student with a strong interest in geopolitics, international relations, political science, history, strategic studies and global affairs.</p>
+              <p>My interests extend to Bangladesh&rsquo;s politics, political history, foreign policy and governance, and the country&rsquo;s position within regional and international geopolitical dynamics.</p>
+              <p>Through this site I am developing my analytical, research and academic writing skills, and building a space to explore and discuss important global and political issues.</p>
+              <p>My long-term aim is to pursue higher education and doctoral research, contribute to international affairs research, and work in policy analysis and strategic studies.</p>
+              <div class="shortbio">
+                <p class="meta">Short bio (for events and publications)</p>
+                <p id="shortBio">Hasanur Rahman is a Mathematics Honours student writing on geopolitics, international relations and strategic studies, with a focus on Bangladesh and South Asia.</p>
+                <button type="button" id="copyBio" class="abtn light sm">Copy bio</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="vision" class="vision">
+        <div class="wrap sec">
+          <h2>Vision</h2>
+          <p class="vtext">To contribute clear, well-sourced analysis to public understanding of international affairs, and to grow into research and policy work.</p>
+          <p class="vclose">Understand the forces shaping our world.</p>
+        </div>
+      </section>
+      <button type="button" class="morerow morerow-end" data-less>
+        <span class="mr-text"><strong>Show less</strong></span>
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>
+      </button>
+      </div></div>
+
+
+      <section id="subscribe" class="band" hidden>
+        <div class="wrap sec subs">
+          <h2>Stay Updated</h2>
+          <p>Receive new analysis and research updates by email.</p>
+          <a id="subLink" class="abtn" href="#" target="_blank" rel="noopener noreferrer">Subscribe</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Article reader (shown when the address ends with #article-...) -->
+  <div id="reader" hidden>
+    <figure class="rcover" id="rCover"></figure>
+    <article class="wrap reader">
+      <p class="back"><a href="#articles">&larr; Back to articles</a></p>
+      <p class="rlabel" id="rLabel"></p>
+      <h1 id="rTitle"></h1>
+      <p class="standfirst" id="rSub"></p>
+      <p class="byline" id="rMeta"></p>
+      <div id="rChips" class="chips"></div>
+      <div id="rShare" class="share"></div>
+      <div id="rTake"></div>
+      <div id="rToc"></div>
+      <div id="rBody" class="body"></div>
+      <div id="rMedia"></div>
+      <div id="rRefs"></div>
+      <aside class="enote" id="rNote"></aside>
+      <div id="rCite"></div>
+      <p class="meta" id="rTags"></p>
+      <div id="rAuthor"></div>
+      <div id="rRelated"></div>
+      <p class="back"><a href="#articles">&larr; Back to articles</a></p>
+    </article>
+  </div>
+
+  <!-- Series page (shown when the address ends with #series-...) -->
+  <section id="seriesView" class="wrap reader" hidden>
+    <p class="back"><a href="#articles">&larr; Back to articles</a></p>
+    <p class="rlabel">Series</p>
+    <h1 id="sTitle"></h1>
+    <p class="standfirst" id="sCount"></p>
+    <ol id="sList" class="slist"></ol>
+  </section>
+
+  <footer id="contact">
+    <div class="wrap fgrid">
+      <div class="fbrand">
+        <img src="logo.png" alt="" width="150" height="111">
+        <p class="fname">Hasanur Rahman</p>
+        <p class="ftag">Understanding Global Politics, Power and Strategy.</p>
+      </div>
+      <nav class="fcol" aria-label="Footer navigation">
+        <h3>Explore</h3>
+        <ul class="flinks">
+          <li data-sec="articles"><a href="#articles">Articles</a></li>
+          <li data-sec="bangladesh" hidden><a href="#articles" data-region="Bangladesh">Bangladesh</a></li>
+          <li data-sec="research" hidden><a href="#research">Research</a></li>
+          <li data-sec="media" hidden><a href="#media">Media</a></li>
+          <li data-sec="glossary" hidden><a href="#glossary">Glossary</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+      <div class="fcol">
+        <h3>Connect</h3>
+        <ul id="socialBox" class="soc"></ul>
+      </div>
+    </div>
+    <div class="wrap fbottom">
+      <p>&copy; <span id="year">2026</span> Hasanur Rahman. All rights reserved.</p>
+      <a class="totop" href="#home"><span>Back to top</span><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+    </div>
+  </footer>
+
+  <script src="articles.js?v=20261125"></script>
+  <script type="module" src="script.js?v=20261125"></script>
+</body>
+</html>
